@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>全選択とグループ選択が可能なチェックボックス</title>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="js/allCheckbox.js"></script>
+  <style>
+    * { /* dummy */
+      margin: 0;
+      padding: 0;
+      line-height: 1;
+    }
+    .container { /* dummy */
+      width: 960px;
+      padding: 50px 0;
+      margin: 0 auto;
+    }
+    .container h1 { /* dummy */
+      margin-bottom: 30px;
+    }
+    /* チェックボックスのスタイル */
+    .allCheckbox {
+      width: 100%;
+      border-bottom: 1px solid #ccc;
+    }
+    .allCheckbox,
+    .allCheckbox dt,
+    .allCheckbox dd {
+      box-sizing: border-box;
+    }
+    .allCheckboxInput {
+
+    }
+    .allCheckboxCat {
+      padding: 10px;
+    }
+    .allCheckbox > dt,
+    .allCheckbox > dd > dl > dt,
+    .allCheckbox > dd > dl > dd > dl > dt {
+      padding: 10px 0;
+    }
+    .allCheckbox dd span {
+      display: block;
+      padding: 10px 0;
+    }
+    .allCheckbox > dt,
+    .allCheckbox > dd > dl > dt,
+    .allCheckbox > dd > dl > dd > dl > dt  {
+      clear: both;
+      float: left;
+      width: 50px;
+      text-align: center;
+    }
+    .allCheckbox > dt {
+      border-width: 1px 1px 0 1px;
+      border-style: solid;
+      border-color: #ccc;
+    }
+    .allCheckbox > dd {
+      margin-left: 50px;
+      padding-left: 10px;
+      border-width: 1px 1px 0 0;
+      border-style: solid;
+      border-color: #ccc;
+    }
+    .allCheckbox > dd > dl {
+      margin-left: -60px;
+    }
+    .allCheckbox > dd > dl > dt {
+      border-width: 0 1px 0 1px;
+      border-style: solid;
+      border-color: #ccc;
+    }
+    .allCheckbox > dd > dl > dd {
+      padding-left: 65px;
+      border-width: 1px 1px 0 0;
+      border-style: solid;
+      border-color: #ccc;
+    }
+    .allCheckbox > dd > dl > dd > dl {
+      margin-left: -65px;
+    }
+    .allCheckbox > dd > dl > dd > dl > dt {
+      border-width: 0 1px 0 1px;
+      border-style: solid;
+      border-color: #ccc;
+    }
+    .allCheckbox > dd > dl > dd > dl > dd {
+      padding-left: 90px;
+      border-width: 1px 1px 0 0;
+      border-style: solid;
+      border-color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>全選択とグループ選択が可能なチェックボックス</h1>
+    <dl class="allCheckbox">
+      <dt class="allCheckboxInput">対象</dt>
+      <dd class="allCheckboxCat">カテゴリ名</dd>
+      <dt><input type="checkbox" id="allCheck01" class="checkAll"></dt>
+      <dd><span><label for="allCheck01">全選択</label></span></dd>
+    </dl>
+    <dl class="allCheckbox">
+      <dt><input type="checkbox" id="allCheck02"></dt>
+      <dd><span><label for="allCheck02">カテゴリ階層1</label></span></dd>
+      <dt><input type="checkbox" id="allCheck03" class="checkGroup"></dt>
+      <dd class="accordionBox">
+        <span><a href="#">[+]</a><label for="allCheck03">カテゴリ階層1</label></span>
+        <dl>
+          <dt><input type="checkbox" id="allCheck04"></dt>
+          <dd><span><label for="allCheck04">カテゴリ階層2</label></span></dd>
+          <dt><input type="checkbox" id="allCheck05"></dt>
+          <dd><span><label for="allCheck05">カテゴリ階層2</label></span></dd>
+        </dl>
+      </dd>
+      <dt><input type="checkbox" id="allCheck06" class="checkGroup"></dt>
+      <dd class="accordionBox">
+        <span><a href="#">[+]</a><label for="allCheck06">カテゴリ階層1</label></span>
+        <dl>
+          <dt><input type="checkbox" id="allCheck07"></dt>
+          <dd><span><label for="allCheck07">カテゴリ階層2</label></span></dd>
+          <dt><input type="checkbox" id="allCheck08" class="checkGroup"></dt>
+          <dd class="accordionBox">
+            <span><a href="#">[+]</a><label for="allCheck08">カテゴリ階層2</label></span>
+            <dl>
+              <dt><input type="checkbox" id="allCheck09"></dt>
+              <dd><span><label for="allCheck09">カテゴリ階層3</label></span></dd>
+              <dt><input type="checkbox" id="allCheck10"></dt>
+              <dd><span><label for="allCheck10">カテゴリ階層3</label></span></dd>
+            </dl>
+          </dd>
+          <dt><input type="checkbox" id="allCheck11" class="checkGroup"></dt>
+          <dd class="accordionBox">
+            <span><a href="#">[+]</a><label for="allCheck11">カテゴリ階層2</label></span>
+            <dl>
+              <dt><input type="checkbox" id="allCheck12"></dt>
+              <dd><span><label for="allCheck12">カテゴリ階層3</label></span></dd>
+              <dt><input type="checkbox" id="allCheck13"></dt>
+              <dd><span><label for="allCheck13">カテゴリ階層3</label></span></dd>
+            </dl>
+          </dd>
+        </dl>
+      </dd>
+    </dl>
+  </div>
+</body>
+</html>
